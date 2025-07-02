@@ -1,7 +1,7 @@
 {
-  "name": "class-transformer",
-  "version": "0.5.1",
-  "description": "Proper decorator-based transformation / serialization / deserialization of plain javascript objects to class constructors",
+  "name": "@scription/class-transformer",
+  "version": "0.5.1-fork.0",
+  "description": "Scription Fork Proper decorator-based transformation / serialization / deserialization of plain javascript objects to class constructors",
   "author": "TypeStack contributors",
   "license": "MIT",
   "readmeFilename": "README.md",
