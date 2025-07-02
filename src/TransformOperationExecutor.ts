@@ -1,6 +1,7 @@
 import { defaultMetadataStorage } from './storage';
 import { ClassTransformOptions, TypeHelpOptions, TypeMetadata, TypeOptions } from './interfaces';
 import { TransformationType } from './enums';
+import BigNumber from 'bignumber.js';
 import { getGlobal, isPromise } from './utils';
 
 function instantiateArrayType(arrayType: Function): Array<any> | Set<any> {
@@ -102,6 +103,8 @@ export class TransformOperationExecutor {
     } else if (targetType === String && !isMap) {
       if (value === null || value === undefined) return value;
       return String(value);
+    } else if (targetType === BigNumber) {
+      return value;
     } else if (targetType === Number && !isMap) {
       if (value === null || value === undefined) return value;
       return Number(value);
